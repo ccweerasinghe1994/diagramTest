@@ -1,7 +1,12 @@
 from diagrams import Diagram
 from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
-from diagrams.aws.network import ELB
 
-with Diagram("Web Service", show=False):
-    ELB("lb") >> EC2("web") >> RDS("userdb")
+graph_attr = {
+    "fontsize": "45",
+    "fontname": "Courier New bold",
+    "label": "Home",
+    "beautify": "true"
+}
+
+with Diagram("Simple Diagram", graph_attr=graph_attr):
+    EC2("WEB")
